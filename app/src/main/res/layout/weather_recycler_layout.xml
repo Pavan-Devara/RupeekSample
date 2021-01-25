@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#d3d3d3">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="7dp"
+        android:background="@drawable/rounded_white_layout">
+
+        <RelativeLayout
+            android:id="@+id/info_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom = "15dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/rounded_white_layout">
+
+            <TextView
+                android:id="@+id/temparature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/temparature"
+                android:layout_alignStart="@+id/temparature"
+                android:layout_alignLeft="@+id/temparature"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="date" />
+
+
+            <ImageView
+                android:id="@+id/rain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/temparature"
+                android:layout_alignTop="@id/temparature"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/rainText"
+                android:layout_toLeftOf="@+id/rainText"
+                android:src="@drawable/ic_rain" />
+
+            <TextView
+                android:id="@+id/rainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_alignBottom="@+id/temparature"
+                android:layout_alignTop="@id/temparature"
+                android:layout_marginRight="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_toStartOf="@+id/wind"
+                android:layout_toLeftOf="@+id/wind"
+                android:textStyle="bold"
+                android:text="rain"/>
+
+            <ImageView
+                android:id="@+id/wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/temparature"
+                android:layout_alignTop="@id/temparature"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/windText"
+                android:layout_toLeftOf="@+id/windText"
+                android:src="@drawable/ic_wind"/>
+
+            <TextView
+                android:id="@+id/windText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/temparature"
+                android:layout_alignBottom="@+id/temparature"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="wind" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
